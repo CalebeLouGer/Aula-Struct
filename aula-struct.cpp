@@ -44,9 +44,9 @@ de tipos diferentes sob um mesmo nome.
 	- Acessando elementos das instâncias um vetor de STRUCT:
 	
 		- Dados do Primeiro Objeto dentro do vetor:
-		printf("Nome: %s\n", p1.[1].nome);
-		printf("Idade: %d\n", p1.[1].idade);
-		printf("Altura: %.2f\n", p1.[1].altura);
+		printf("Nome: %s\n", p1[1].nome);
+		printf("Idade: %d\n", p1[1].idade);
+		printf("Altura: %.2f\n", p1[1].altura);
 */
 
 #include <stdio.h>
@@ -69,4 +69,14 @@ main(){
 	printf("Nome: %s\n",pessoa1.nome);
 	printf("Idade: %d\n",pessoa1.idade);
 	printf("Altura: %.2f\n",pessoa1.altura);
+	
+	
+	typedef struct Pessoa Entidade;
+	Entidade p;
+	p = {"Calebe",19,1.72};
+	
+	struct Pessoa p1[3] = {{"Cal",19,1.72},{"Rods",19,1.70},{"Marcelin",20,1.78}};
+	printf("Nome: %s\n",p1[0].nome);
+	printf("Nome: %s\n",p1[1].nome);
+	printf("Nome: %s\n",p1[2].nome);
 }
